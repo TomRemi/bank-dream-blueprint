@@ -1,34 +1,46 @@
-import HeroSection from "@/components/HeroSection";
-import CourseHighlights from "@/components/CourseHighlights";
-import TestimonialSection from "@/components/TestimonialSection";
-import NotificationSection from "@/components/NotificationSection";
-import ExamPatternSection from "@/components/ExamPatternSection";
-import FAQSection from "@/components/FAQSection";
-import CTAFooter from "@/components/CTAFooter";
+import SSCHeroSection from "@/components/SSCHeroSection";
+import AboutSSCSection from "@/components/AboutSSCSection";
+import TiersBreakdownSection from "@/components/TiersBreakdownSection";
+import SSCCourseFeatures from "@/components/SSCCourseFeatures";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import EligibilitySection from "@/components/EligibilitySection";
+import UpcomingBatchSection from "@/components/UpcomingBatchSection";
+import RegistrationForm from "@/components/RegistrationForm";
+import FloatingCTA from "@/components/FloatingCTA";
+import SSCFooter from "@/components/SSCFooter";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <HeroSection />
+      <SSCHeroSection />
       
-      {/* Course Highlights */}
-      <CourseHighlights />
+      {/* About SSC CGL */}
+      <AboutSSCSection />
       
-      {/* Testimonials */}
-      <TestimonialSection />
+      {/* Tiers Breakdown */}
+      <TiersBreakdownSection />
       
-      {/* Notification Summary */}
-      <NotificationSection />
+      {/* Course Features */}
+      <SSCCourseFeatures />
       
-      {/* Exam Pattern */}
-      <ExamPatternSection />
+      {/* Why Choose Us */}
+      <WhyChooseUsSection />
       
-      {/* FAQ Section */}
-      <FAQSection />
+      {/* Eligibility Criteria */}
+      <EligibilitySection />
       
-      {/* CTA Footer */}
-      <CTAFooter />
+      {/* Upcoming Batch Details */}
+      <UpcomingBatchSection />
+      
+      {/* Registration Form */}
+      <RegistrationForm />
+      
+      {/* Footer */}
+      <SSCFooter />
+      
+      {/* Floating CTA */}
+      <FloatingCTA />
     </div>
   );
 };
