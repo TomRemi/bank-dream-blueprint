@@ -2,41 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* SBI PO Course Design System - Shankar Banking Academy
+All colors MUST be HSL format. Following the specified brand guidelines.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    /* Brand Colors */
+    --primary: 0 100% 65%; /* Bright Red/Orange #FF4D4D */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    
+    --secondary: 208 100% 18%; /* Deep Navy Blue #002B5C */
+    --secondary-foreground: 0 0% 100%; /* White text on secondary */
+    
+    --accent: 47 99% 50%; /* Golden Yellow #FEC601 */
+    --accent-foreground: 0 0% 20%; /* Charcoal text on accent */
+    
+    /* Background Colors */
+    --background: 220 33% 98%; /* Soft Grayish Blue #F8F9FB */
+    --foreground: 0 0% 20%; /* Charcoal Gray #333333 */
+    
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 0 0% 20%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    --popover-foreground: 0 0% 20%;
+    
+    --muted: 220 33% 98%; /* Same as background */
+    --muted-foreground: 0 0% 40%;
+    
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* UI Elements */
+    --border: 0 0% 88%; /* Light Gray #E0E0E0 */
+    --input: 0 0% 88%;
+    --ring: 0 100% 65%;
+    
+    /* Footer */
+    --footer: 0 0% 11%; /* Dark Slate #1C1C1C */
+    --footer-foreground: 0 0% 100%;
+    
+    /* Custom Properties */
+    --radius: 10px; /* Rounded corners as specified */
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 100% 65% / 0.9), hsl(208 100% 18% / 0.9));
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-hover: 0 8px 25px -8px hsl(0 100% 65% / 0.3);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +113,48 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+  }
+}
+
+/* Custom Animations for SBI PO Landing Page */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
